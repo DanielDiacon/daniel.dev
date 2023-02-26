@@ -1,0 +1,208 @@
+// import fonts/font <=>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+
+// default font / default font size <=>
+$fontFamily: "Montserrat", sans-serif;
+$fontSize: 14;
+
+//root <=>
+:root{
+   --mainColor: #e0e013;
+   --black-primary: #0c0c0f;
+	--black-secondly: #111113;
+	--white-primary: #ebebf0;
+	--white-secondly: #d4d4d4;
+}
+
+//dark mode and light <=>
+.darkmode{
+   --mainColor: #ffff00;
+   --black-primary: #ebebf0;
+	--black-secondly: #cacacf;
+	--white-primary: #0c0c0f;
+	--white-secondly: #111113;
+}
+
+// max width for container <=>
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1250;
+
+// size gadjes for adapted and other <=>
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+// null style <=>
+@import "_null.scss";
+
+// general style <=>
+body {
+   transition: .2s;
+   background: var(--white-primary);
+   color: var(--black-secondly);
+   line-height: 18px;
+   caret-color: var(--mainColor);
+   font-family: $fontFamily;
+   font-size: $fontSize + px;
+   font-weight: 500;
+   //scroll block when open burger
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+// wrapper <=>
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+// container <=>
+.container {
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+   //fix for slider
+   > * {
+      min-width: 0;
+   }
+}
+
+// the footer to the bottom of the page <=>
+main {
+   padding-top: 80px;
+   flex: 1 1 auto;
+}
+
+// title  <=>
+.title {
+   color: var(--black-primary);
+   font-size: 20px;
+   font-weight: 700;
+   
+}
+.title[data-scroll="in"]{
+}
+
+// text  <=>
+.text {
+   color: var(--black-secondly);
+}
+.text[data-scroll="in"]{
+}
+
+// block  <=>
+.block {
+}
+.block[data-scroll="in"]{
+}
+
+// scroll bar <=>
+@media only screen and (max-width:$mobile) {
+   ::-webkit-scrollbar {
+      display: none;
+   }
+}
+::-webkit-scrollbar {
+   background-color: var(--white-primary);
+   width: 16px;
+}
+::-webkit-scrollbar-track {
+   background-color: var(--white-primary);
+}
+::-webkit-scrollbar-thumb {
+   background-color: #a0a0a5;
+   border-radius: 16px;
+   border: 4px solid var(--white-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+   background-color: #76767a;
+}
+::-webkit-scrollbar-thumb:active {
+   background-color: var(--black-secondly);
+}
+::-webkit-scrollbar-button {
+   display: none;
+}
+
+// when copu text<=>
+::selection {
+   color: var(--white-secondly);
+   background: var(--black-secondly);
+}
+
+//loading page style<=>
+.loader{
+   z-index: 200;
+   position: absolute;
+   width: 100%;
+   height: 100vh; 
+   background: var(--white-primary);
+   transition: .5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.spinner {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   border: 9px solid var(--mainColor);
+   animation: spinner-bulqg1 0.8s infinite linear alternate,
+        spinner-oaa3wk 1.6s infinite linear;
+}
+
+@keyframes spinner-bulqg1 {
+   0% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+   }
+
+   12.5% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+   }
+
+   25% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+   }
+
+   50% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   62.5% {
+      clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   75% {
+      clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   100% {
+      clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+   }
+}
+
+@keyframes spinner-oaa3wk {
+   0% {
+      transform: scaleY(1) rotate(0deg);
+   }
+
+   49.99% {
+      transform: scaleY(1) rotate(135deg);
+   }
+
+   50% {
+      transform: scaleY(-1) rotate(0deg);
+   }
+
+   100% {
+      transform: scaleY(-1) rotate(-135deg);
+   }
+}
+
+//import scss modules<=>
+@import "_header.scss";
+@import "_footer.scss";
+@import "_settings.scss";
