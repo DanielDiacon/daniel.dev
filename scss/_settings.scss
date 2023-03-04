@@ -28,8 +28,11 @@
       display: flex;
       flex-direction: column;
       gap: 5px;
+      opacity: 0;
+      transition: .2s;
    }
    &__menu.active {
+      opacity: 1;
       max-height: 500px;
       visibility: visible;
    }
@@ -76,6 +79,7 @@
       width: 8px;
       background: var(--black-primary);
       border-radius: 10px;
+      transition: .2s;
    }
 }
 body.darkmode .settings__mode::after{
@@ -87,21 +91,3 @@ body.darkmode .settings__mode{
 }
 
 
-//font size style
-.setting {
-   &__buttons {
-      display: flex;
-      gap: 5px;
-   }
-   &__btn {
-      width: 18px;
-      height: 18px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: 2px solid var(--black-primary);
-   }
-
-}

@@ -51,3 +51,24 @@ window.addEventListener("load", function () {
    loader.style.display = "none";
 });
 
+
+// header show <=>
+var lastScrollTop = 0;
+navbar = document.getElementById('navbar');
+window.addEventListener("scroll", function () {
+   var scrollTop = window.pageXOffset || document.documentElement.scrollTop;
+   if (scrollTop > lastScrollTop) {
+      navbar.style.top = '-80px'
+      dropdownMenu.classList.remove('active');
+      dropdown.classList.remove('active');
+      submenu.classList.remove('active');
+      burger.classList.remove('active');
+      menu.classList.remove('active');
+      dropdownSettingsMenu.classList.remove('active');
+      dropdownSettings.classList.remove('active');
+   } else {
+      navbar.style.top = '0'
+   }
+   lastScrollTop = scrollTop;
+});
+

@@ -1,5 +1,6 @@
 .header {
-   position: absolute;
+   user-select: none;
+   position: fixed;
    height: 70px;
    padding: 15px 15px;
    width: 100%;
@@ -15,12 +16,10 @@
       height: 40px;
       border-radius: 10px;
       width: 67px;
-      background: #0c0c0f;
-      padding: 10px;
    }
    &__logo {
       cursor: pointer;
-      height: 20px;
+      height: 40px;
       width: auto;
       position: relative;
       transition: .2s;
@@ -29,8 +28,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      height: 20px;
+      height: 40px;
       object-fit: cover;
+      filter: var(--filter);
    }
 }
 
@@ -52,6 +52,7 @@
       height: 40px;
       border-radius: 10px;
       position: relative;
+      transition: .1s;
    }
    &__item:hover {
       background: var(--white-secondly);
@@ -65,7 +66,7 @@
       align-items: center;
       height: 100%;
       width: 100%;
-      user-select: none;
+      transition: .1s;
    }
    &__item:hover  &__link{
       background: none;
@@ -75,7 +76,12 @@
 }
 
 .sub-menu {
+   cursor: pointer;
+
    &__list {
+      cursor:default;
+
+      opacity: 0;
       visibility: hidden;
       position: absolute;
       left: 0;
@@ -87,7 +93,9 @@
       transition: max-height .3s linear;
       border-radius: 10px;
       padding:10px;
+      transition: .2s;
       &.active{
+         opacity: 1;
          visibility: visible;
          max-height: 500px;
       }
@@ -98,6 +106,7 @@
       white-space: nowrap;
       padding:10px;
       border-radius: 10px;
+      transition: .1s;
    }
    &__link:hover {
       color: var(--black-primary);
@@ -153,9 +162,11 @@ body.lock
 	}
    .menu__burger-icon-one {
       opacity: 1;
+      transition: .1s;
    }
    .menu__burger-icon-two {
       opacity: 0;
+      transition: .1s;
    }
    &__burger.active .menu__burger-icon-one {
       opacity: 0;
@@ -177,8 +188,10 @@ body.lock
       border-radius: 10px;
       padding: 10px;
       transition: .2s;
+      opacity: 0;
    }
    &__body.active {
+      opacity: 1;
       visibility: visible;
       transition: max-height .3s linear;
       max-height: 1000px;

@@ -1,0 +1,50 @@
+.main-title {
+   position: relative;
+   padding-left: 20px;
+   &::after{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 100%;
+      border-radius: 10px;
+      background: var(--mainColor);
+   }
+}
+//.second-title {
+//   position: relative;
+//   padding-left: 30px;
+//   &::after{
+//      content:'';
+//      position: absolute;
+//      top: 0;
+//      left: 10px;
+//      margin: 5px;
+//      width: 10px;
+//      height: 10px;
+//      border-radius: 10px;
+//      background: var(--mainColor);
+//      opacity: .5;
+//   }
+//}
+.article {
+   padding: 20px;
+   padding-bottom: 40px;
+   &__title {
+      margin-bottom: 10px;
+   }
+   &__text {
+      padding: 0 20px;
+   }
+}
+
+.web-dev {
+   &__title {
+   }
+}
+
+.graphic {
+   &__title {
+   }
+}

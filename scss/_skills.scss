@@ -1,0 +1,51 @@
+//.article__body {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr;
+//   @media only screen and (max-width:$mobile) {
+//      grid-template-columns: 1fr;
+//      grid-template-rows: 1fr 1fr;
+//   }
+//}
+.skills-article {
+   padding-left: 20px;
+   &__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--black-primary);
+   }
+   &__grid {
+      padding: 10px 0;
+      padding-bottom: 30px;
+      display: grid;
+      gap:30px 50px;
+      grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+   }
+   &__item {
+      
+   }
+
+   &__tool {
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--black-secondly);
+   }
+   &__progress-bar {
+      width: 100%;
+      height: 5px;
+      background: var(--white-secondly);
+      position: relative;
+      border-radius:10px ;
+   }
+   &__progress-bar::after{
+      content:'';
+      position: absolute;
+      border-radius:10px ;
+      top: -2.5px;left: 0;
+      width: var(--width-progress);
+      height: 10px;
+      background: var(--mainColor);
+   }
+}
+
