@@ -40,5 +40,32 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 
-// font size <=========>
+// like <=========>
 
+// Get all objects with class "clickable"
+const likeButtons = document.querySelectorAll('#toggle-like');
+
+// Add click event listener to each like button
+likeButtons.forEach(function (button) {
+   button.addEventListener('click', function () {
+      // Toggle "active" class on clicked button
+      button.classList.toggle('active');
+
+      // Get post ID from data attribute
+      const postId = button.dataset.postId;
+
+      // Get current like status of post from local storage
+      const postLikes = JSON.parse(localStorage.getItem('postLikes')) || {};
+      const postLikeStatus = postLikes[postId] || false;
+
+      // Update like status of post in local storage
+      postLikes[postId] = button.classList.contains('active');
+      localStorage.setItem('postLikes', JSON.stringify(postLikes));
+   });
+
+   // Retrieve like status of post from local storage on page load
+   const postId = button.dataset.postId;
+   const postLikes = JSON.parse(localStorage.getItem('postLikes')) || {};
+   const postLikeStatus = postLikes[postId] || false;
+   button.classList.toggle('active', postLikeStatus);
+});

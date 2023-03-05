@@ -1,12 +1,18 @@
-//.article__body {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 1fr;
-//   @media only screen and (max-width:$mobile) {
-//      grid-template-columns: 1fr;
-//      grid-template-rows: 1fr 1fr;
-//   }
-//}
+.second-title {
+   position: relative;
+   padding-left: 20px;
+   &::after{
+      content:'';
+      position: absolute;
+      top: 4px;
+      left: 0px;
+      margin: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background: var(--mainColor);
+   }
+}
 .skills-article {
    padding-left: 20px;
    &__title {
@@ -47,5 +53,6 @@
       height: 10px;
       background: var(--mainColor);
    }
+
 }
 

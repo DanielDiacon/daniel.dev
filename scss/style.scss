@@ -15,7 +15,6 @@ $fontSize: 14;
 	--white-not-change: #ebebf0;
 	--v-black-not-change: #1e1e22;
    --filter:brightness(1%);
-
 }
 
 //dark mode and light <=>
@@ -221,3 +220,5 @@ main {
 @import "_about.scss";
 @import "_article.scss";
 @import "_skills.scss";
+@import "_portofolio.scss";
+
