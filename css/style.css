@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
 :root {
-  --mainColor: #FFCC00;
+  --mainColor: #ffff00;
   --black-primary: #0c0c0f;
   --black-secondly: #1e1e22;
   --white-primary: #ebebf0;
@@ -11,14 +11,13 @@
 }
 
 .darkmode {
-  --mainColor: #ffff00;
   --black-primary: #ebebf0;
   --black-secondly: #cacacf;
   --white-primary: #0c0c0f;
   --white-secondly: #1a1a1b;
   --white-not-change: #ebebf0;
   --black-not-change: #1e1e22;
-  --filter:normal;
+  --filter: grayscale(100%);
 }
 
 * {
@@ -335,6 +334,7 @@ main {
 
 .sub-menu {
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .sub-menu__list {
   cursor: default;
@@ -675,6 +675,17 @@ body.darkmode .settings__mode {
   background: var(--black-primary);
 }
 
+.setting__choose-color {
+  display: flex;
+  gap: 5px;
+}
+.setting__color {
+  border: 2px solid var(--black-primary);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
 .about {
   min-height: 400px;
   width: 100%;
@@ -725,12 +736,12 @@ body.darkmode .settings__mode {
   font-weight: 600;
   padding: 10px 20px;
   border-radius: 6px;
-  background: var(--mainColor);
+  background: var(--white-not-change);
   color: var(--black-not-change);
-  transition: 0.2s;
+  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .about__my-story:hover {
-  background: var(--white-not-change);
+  padding: 10px 25px;
 }
 
 .main-title {

@@ -90,4 +90,15 @@ body.darkmode .settings__mode{
    background: var(--black-primary);
 }
 
-
+.setting {
+   &__choose-color {
+      display: flex;
+      gap: 5px;
+   }
+   &__color {
+      border: 2px solid var(--black-primary);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+   }
+}

@@ -7,7 +7,8 @@ $fontSize: 14;
 
 //root <=>
 :root{
-   --mainColor: #FFCC00;
+  
+   --mainColor: #ffff00;
    --black-primary: #0c0c0f;
 	--black-secondly: #1e1e22;
 	--white-primary: #ebebf0;
@@ -19,14 +20,13 @@ $fontSize: 14;
 
 //dark mode and light <=>
 .darkmode{
-   --mainColor: #ffff00;
    --black-primary: #ebebf0;
 	--black-secondly: #cacacf;
 	--white-primary: #0c0c0f;
 	--white-secondly: #1a1a1b;
    --white-not-change: #ebebf0;
 	--black-not-change: #1e1e22;
-   --filter:normal;
+   --filter: grayscale(100%);
 }
 
 // max width for container <=>
@@ -221,4 +221,3 @@ main {
 @import "_article.scss";
 @import "_skills.scss";
 @import "_portofolio.scss";
-

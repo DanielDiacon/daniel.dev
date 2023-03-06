@@ -47,12 +47,12 @@
       font-weight: 600;
       padding: 10px 20px;
       border-radius: 6px;
-      background: var(--mainColor);
+      background: var(--white-not-change);
       color: var(--black-not-change);
-      transition: .2s;
+      transition: .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
    }
    &__my-story:hover {
-      background: var(--white-not-change);
+      padding: 10px 25px;
    }
 }
 
