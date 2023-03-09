@@ -752,6 +752,12 @@ body.darkmode .settings__mode {
   color: var(--white-not-change);
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 767.98px) {
+  .about__title {
+    font-size: 25px;
+    padding: 0 calc(20px + 6.8965517241vw);
+  }
+}
 .about__me {
   color: var(--white-not-change);
   z-index: 2;
@@ -760,6 +766,11 @@ body.darkmode .settings__mode {
           backdrop-filter: grayscale(100%) blur(10px);
   padding: 15px;
   border-radius: 15px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about__me {
+    display: none;
+  }
 }
 .about__my-story {
   margin-top: 10px;
