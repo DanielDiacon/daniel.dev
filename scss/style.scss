@@ -95,7 +95,7 @@ main {
    flex: 1 1 auto;
 }
 .scroll-content{
-   min-height: 99.9%;
+   min-height: 100%;
    display: flex;
    flex-direction: column;
    overflow: hidden;
@@ -150,10 +150,10 @@ main {
 //loading page style<=>
 .loader{
    z-index: 200;
-   position: absolute;
+   position: fixed;
    width: 100%;
    height: 100vh; 
-   background: var(--white-primary);
+   background: #0c0c0f;
    transition: .5s;
    display: flex;
    justify-content: center;
@@ -163,11 +163,10 @@ main {
    width: 56px;
    height: 56px;
    border-radius: 50%;
-   border: 9px solid var(--mainColor);
+   border: 9px solid #ffff00;
    animation: spinner-bulqg1 0.8s infinite linear alternate,
         spinner-oaa3wk 1.6s infinite linear;
 }
-
 @keyframes spinner-bulqg1 {
    0% {
       clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
@@ -197,7 +196,6 @@ main {
       clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
    }
 }
-
 @keyframes spinner-oaa3wk {
    0% {
       transform: scaleY(1) rotate(0deg);
@@ -216,6 +214,16 @@ main {
    }
 }
 
+
+// target 
+@keyframes idTarget {
+   0%{
+      background: var(--mainColor);
+   }
+   100%{
+      background:rgba(255, 255, 255, 0);
+   }
+}
 //import scss modules<=>
 @import "_header.scss";
 @import "_footer.scss";
@@ -225,3 +233,7 @@ main {
 @import "_skills.scss";
 @import "_portofolio.scss";
 @import "_sites.scss";
+@import "_contact.scss";
+
+
+

@@ -150,11 +150,11 @@ body.lock
       width: 40px;
       border-radius: 10px;
       z-index:2;
-      background: var(--black-primary);
+      background: var(--white-secondly);
    }
 	&__burger-icon {
       pointer-events: none;
-      color: var(--white-primary);
+      color: var(--black-primary);
       height: 25px;
       width: 25px;
       position: absolute;
@@ -215,8 +215,10 @@ body.lock
       color: var(--black-primary);
       background: none;
       display: flex;
-      
       align-items: center;
+   }
+   &__link.btn{
+      line-height: 1.4;
    }
    &__item:hover &__link{
       background: none;

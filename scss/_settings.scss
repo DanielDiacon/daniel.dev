@@ -10,7 +10,7 @@
       justify-content: center;
       border-radius: 10px;
       cursor: pointer;
-      background: var(--black-primary);
+      background: var(--white-secondly);
    }
    &__menu {
       min-width: 320px;
@@ -40,13 +40,12 @@
       pointer-events: none;
       height: 25px;
       width: 25px;
-      color: var(--white-primary);
+      color: var(--black-primary);
       transform: rotate(0deg);
       transition: .2s;
    }
    &__btn.active  &__icons{
       animation: settings-animation 1s infinite linear;
-      color: var(--white-primary);
    }
    @keyframes settings-animation {
       0%{
@@ -57,6 +56,7 @@
       }
    }
    &__setting {
+      padding: 5px;
       display: flex;
       justify-content: space-between;
    }
@@ -67,7 +67,8 @@
       width: 30px;
       height: 18px;
       border-radius: 10px;
-      border: 2px solid var(--black-primary);
+      border: 2px solid var(--black-secondly);
+      background: var(--black-secondly);
       position: relative;
    }
    &__mode::after{
@@ -77,17 +78,19 @@
       left: 3px;
       height: 8px;
       width: 8px;
-      background: var(--black-primary);
+      background: var(--white-secondly);
       border-radius: 10px;
       transition: .2s;
    }
 }
 body.darkmode .settings__mode::after{
    left: 15px;
-   background: var(--white-primary);
+   background: var(--white-secondly);
 }
 body.darkmode .settings__mode{
    background: var(--black-primary);
+   border: 2px solid var(--black-primary);
+
 }
 
 .setting {
@@ -96,7 +99,6 @@ body.darkmode .settings__mode{
       gap: 5px;
    }
    &__color {
-      border: 2px solid var(--black-primary);
       width: 18px;
       height: 18px;
       border-radius: 50%;

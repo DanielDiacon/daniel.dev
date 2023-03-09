@@ -7,6 +7,9 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid var(--black-primary);
+      &:target{
+         animation: idTarget 3s;
+      }
    }
 
    &__logo {

@@ -43,7 +43,9 @@ document.onclick = function (e) {
 // loading page <=>
 const loader = document.getElementById("loader");
 window.addEventListener("load", function () {
-   loader.style.display = "none";
+   loader.style.visibility = "hidden";
+   loader.style.opacity = "0";
+   loader.style.transition = "1s";
 });
 
 
@@ -69,9 +71,26 @@ window.addEventListener("scroll", function () {
 
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-ScrollSmoother.create({
-   wrapper: '.scroll-wrapper',
-   content: '.scroll-content',
-   smooth: 0.8,
-})
+// Open popup
+document.querySelector(".btn").addEventListener("click", function () {
+   document.querySelector(".popup").classList.add("active");
+   document.documentElement.classList.add("hidden");
+});
+
+// Close popup when clicking on button
+document.querySelector(".close").addEventListener("click", function () {
+   document.querySelector(".popup").classList.remove("active");
+   document.documentElement.classList.remove("hidden");
+});
+
+// Close menu when clicking outside the element area
+document.addEventListener("click", (e) => {
+   const withinBoundaries =
+      e.composedPath().includes(document.querySelector(".inner")) ||
+      e.composedPath().includes(document.querySelector(".btn")) ||
+      e.composedPath().includes(document.querySelector(".close"));
+
+   if (!withinBoundaries) {
+      document.querySelector(".popup").classList.remove("active");
+   }
+});
