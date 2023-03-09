@@ -1,8 +1,17 @@
 // import fonts/font <=>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
 
+@font-face {
+   font-family: gilroyBold_f;
+   src: url(../fonts/Gilroy/Gilroy-ExtraBold.otf);
+}
+@font-face {
+   font-family: gilroyLight_f;
+   src: url(../fonts/Gilroy/Gilroy-Light.otf);
+}
 // default font / default font size <=>
-$fontFamily: "Montserrat", sans-serif;
+$fontFamilyBold: "gilroyBold_f";
+$fontFamily: "gilroyLight_f";
 $fontSize: 14;
 
 //root <=>
@@ -56,7 +65,6 @@ body {
    caret-color: var(--mainColor);
    font-family: $fontFamily;
    font-size: $fontSize + px;
-   font-weight: 500;
    //scroll block when open burger
    .lock & {
       overflow: hidden;
@@ -86,29 +94,25 @@ main {
    padding-top: 70px;
    flex: 1 1 auto;
 }
+.scroll-content{
+   min-height: 99.9%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
 
 // title  <=>
 .title {
    color: var(--black-primary);
    font-size: 25px;
-   font-weight: 700;
-   
+   font-family: $fontFamilyBold;
 }
-.title[data-scroll="in"]{
-}
-
 // text  <=>
 .text {
    color: var(--black-secondly);
 }
-.text[data-scroll="in"]{
-}
 
-// block  <=>
-.block {
-}
-.block[data-scroll="in"]{
-}
+
 
 // scroll bar <=>
 @media only screen and (max-width:$mobile) {
@@ -137,7 +141,6 @@ main {
 ::-webkit-scrollbar-button {
    display: none;
 }
-
 // when copu text<=>
 ::selection {
    color: var(--white-secondly);
@@ -221,3 +224,4 @@ main {
 @import "_article.scss";
 @import "_skills.scss";
 @import "_portofolio.scss";
+@import "_sites.scss";

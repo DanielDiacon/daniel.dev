@@ -40,11 +40,6 @@ document.onclick = function (e) {
    }
 };
 
-//  animation for scroll <=>
-//ScrollOut({
-//   targets: '.title , .text , .block'
-//});
-
 // loading page <=>
 const loader = document.getElementById("loader");
 window.addEventListener("load", function () {
@@ -74,3 +69,9 @@ window.addEventListener("scroll", function () {
 
 
 
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+ScrollSmoother.create({
+   wrapper: '.scroll-wrapper',
+   content: '.scroll-content',
+   smooth: 0.8,
+})

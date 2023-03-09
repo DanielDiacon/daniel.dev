@@ -1,8 +1,7 @@
 .about {
    min-height: 400px;
    width:100%;
-   padding:0 15px;
-   padding-bottom: 60px;
+   padding:20px 15px;
    &__body {
       padding: 50px 0;
       min-height: 400px;
@@ -42,9 +41,9 @@
       padding: 20px calc(20px + 150  * (100vw / $maxWidthContainer));
    }
    &__my-story {
+      font-family: $fontFamilyBold;
       z-index: 2;
       cursor: pointer;
-      font-weight: 600;
       padding: 10px 20px;
       border-radius: 6px;
       background: var(--white-not-change);

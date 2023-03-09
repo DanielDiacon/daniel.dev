@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+@font-face {
+  font-family: gilroyBold_f;
+  src: url(../fonts/Gilroy/Gilroy-ExtraBold.otf);
+}
+@font-face {
+  font-family: gilroyLight_f;
+  src: url(../fonts/Gilroy/Gilroy-Light.otf);
+}
 :root {
   --mainColor: #ffff00;
   --black-primary: #0c0c0f;
@@ -107,9 +115,8 @@ body {
   color: var(--black-secondly);
   line-height: 1.4;
   caret-color: var(--mainColor);
-  font-family: "Montserrat", sans-serif;
+  font-family: "gilroyLight_f";
   font-size: 14px;
-  font-weight: 500;
 }
 .lock body {
   overflow: hidden;
@@ -136,10 +143,17 @@ main {
   flex: 1 1 auto;
 }
 
+.scroll-content {
+  min-height: 99.9%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .title {
   color: var(--black-primary);
   font-size: 25px;
-  font-weight: 700;
+  font-family: "gilroyBold_f";
 }
 
 .text {
@@ -319,7 +333,6 @@ main {
 .menu__link {
   padding: 0 10px;
   color: var(--black-primary);
-  font-weight: 600;
   height: 40px;
   display: flex;
   align-items: center;
@@ -468,7 +481,6 @@ main {
     height: auto;
     color: var(--black-primary);
     background: none;
-    font-weight: 500;
     display: flex;
     align-items: center;
   }
@@ -689,8 +701,7 @@ body.darkmode .settings__mode {
 .about {
   min-height: 400px;
   width: 100%;
-  padding: 0 15px;
-  padding-bottom: 60px;
+  padding: 20px 15px;
 }
 .about__body {
   padding: 50px 0;
@@ -731,9 +742,9 @@ body.darkmode .settings__mode {
   padding: 20px calc(20px + 10.3448275862vw);
 }
 .about__my-story {
+  font-family: "gilroyBold_f";
   z-index: 2;
   cursor: pointer;
-  font-weight: 600;
   padding: 10px 20px;
   border-radius: 6px;
   background: var(--white-not-change);
@@ -791,7 +802,6 @@ body.darkmode .settings__mode {
 }
 .skills-article__title {
   font-size: 20px;
-  font-weight: 600;
   color: var(--black-primary);
 }
 .skills-article__grid {
@@ -802,9 +812,9 @@ body.darkmode .settings__mode {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .skills-article__tool {
+  font-family: "gilroyBold_f";
   padding-bottom: 10px;
   font-size: 20px;
-  font-weight: 600;
   color: var(--black-secondly);
 }
 .skills-article__progress-bar {
@@ -888,12 +898,106 @@ body.darkmode .settings__mode {
   color: hsl(0, 81%, 44%);
 }
 .project__name {
+  font-family: "gilroyBold_f";
   text-transform: uppercase;
   color: var(--black-primary);
   font-size: 16px;
-  font-weight: 600;
 }
 .project__data {
   font-size: 12px;
   opacity: 0.95;
+}
+
+.sites {
+  padding: 5px 20px;
+}
+.sites__body {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .sites__body {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .sites__body {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.site-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+}
+.site-item__wrapper {
+  border-radius: 15px;
+  background: var(--white-secondly);
+  position: relative;
+  transition: 0.2s;
+}
+.site-item__row {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding-bottom: 10px;
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), #000, #000, #000);
+          mask-image: linear-gradient(to left, rgba(0, 0, 0, 0), #000, #000, #000);
+}
+.site-item__logo-site {
+  height: 50px;
+  min-width: 50px;
+  position: relative;
+  border-radius: 5px;
+}
+.site-item__logo-site img {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.site-item__name-site {
+  color: var(--black-primary);
+  padding: 10px 0;
+  white-space: nowrap;
+}
+.site-item__description {
+  width: 100%;
+  padding-right: 30px;
+  color: var(--black-secondly);
+  text-align: left;
+}
+.site-item__icon-wrapper {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 10px;
+  right: 10px;
+  background: var(--white-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.site-item__acces-button {
+  font-size: 30px;
+  margin: 5px;
+  cursor: pointer;
+  color: var(--black-secondly);
+}
+
+.logo-png {
+  background: var(--white-primary);
+  padding: 5px;
+}
+.logo-png img {
+  padding: 5px;
 }
