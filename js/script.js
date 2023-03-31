@@ -45,9 +45,8 @@ const loader = document.getElementById("loader");
 window.addEventListener("load", function () {
    loader.style.visibility = "hidden";
    loader.style.opacity = "0";
-   loader.style.transition = "1s";
+   loader.style.transition = "0.7s";
 });
-
 
 // header show <=>
 var lastScrollTop = 0;

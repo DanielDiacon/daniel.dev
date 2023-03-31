@@ -16,8 +16,7 @@ $fontSize: 14;
 
 //root <=>
 :root{
-  
-   --mainColor: #ffff00;
+   --mainColor: #f9e900;
    --black-primary: #0c0c0f;
 	--black-secondly: #1e1e22;
 	--white-primary: #ebebf0;
@@ -163,7 +162,7 @@ main {
    width: 56px;
    height: 56px;
    border-radius: 50%;
-   border: 9px solid #ffff00;
+   border: 9px solid #f9e900;
    animation: spinner-bulqg1 0.8s infinite linear alternate,
         spinner-oaa3wk 1.6s infinite linear;
 }
