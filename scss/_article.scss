@@ -1,20 +1,11 @@
-.main-title {
-   position: relative;
-   padding-left: 20px;
-   &::after{
-      content:'';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 10px;
-      height: 100%;
-      border-radius: 10px;
-      background: var(--mainColor);
-   }
-}
+
 .article {
-   padding: 20px;
-   padding-bottom: 40px;
+   padding:0 15px 15px 15px;
+   &__body {
+      background: var(--white-secondly);
+      padding: 30px;
+      border-radius: 20px;
+   }
    &__title {
       margin-bottom: 10px;
    }

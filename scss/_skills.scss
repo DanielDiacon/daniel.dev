@@ -1,66 +1,55 @@
-.second-title {
-   position: relative;
-   padding-left: 20px;
-   font-family: $fontFamilyBold;
-   &::after{
-      content:'';
-      position: absolute;
-      top: 4px;
-      left: 0px;
-      margin: 5px;
-      width: 10px;
-      height: 10px;
-      border-radius: 10px;
-      background: var(--mainColor);
+
+   
+.skills {
+   padding:0 15px 15px 15px;
+   &__body{
+      background: var(--white-secondly);
+      padding: 30px;
+      border-radius: 20px;
    }
-}
-.skills-article {
-   padding:0 20px;
-   width: 100%;
-   &__wrapper{
-      display: flex;
-      gap: 50px;
-      justify-content: space-between;
-   }
-   &__title {
-      font-size: 20px;
-      color: var(--black-primary);
+   &__text {
+      padding: 20px;
    }
    &__grid {
-      padding: 10px 20px;
-      padding-bottom: 30px;
       display: grid;
-      gap:30px 50px;
-      grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+      grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+      gap: 15px;
+      padding: 20px;
+   }
+   &__item{
+      background: var(--white-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      height: 60px;
+      border-radius: 15px;
    }
    &__tool {
-      font-family: $fontFamilyBold;
-      padding-bottom: 10px;
       font-size: 20px;
-      color: var(--black-secondly);
+      line-height: 1;
+      font-family: $fontFamilyBold;
+      white-space: nowrap;
+      color: var(--black-primary);
+      padding: 0 10px;
    }
    &__progress-bar {
-      width: 100%;
-      height: 5px;
-      background: var(--white-secondly);
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
       position: relative;
-      border-radius:10px ;
+      overflow: hidden;
+      background: var(--white-secondly);
    }
    &__progress-bar::after{
-      content:'';
+      content: "";
       position: absolute;
-      border-radius:10px ;
-      top: -2.5px;left: 0;
-      width: var(--width-progress);
-      height: 10px;
-      background: var(--mainColor);
-   }
-   @media only screen and (max-width:$mobile) {
-      &__wrapper{
-         display: flex;
-         flex-direction: column;
-         gap: 20px;
-      }  
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: var(--width-progress);
+      background: var(--black-primary);
+
    }
 }
 

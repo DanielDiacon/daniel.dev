@@ -106,7 +106,6 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 10px;
 }
 
 body {
@@ -716,7 +715,7 @@ body.darkmode .settings__mode {
 .about {
   min-height: 400px;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 15px 15px 15px;
 }
 .about__body {
   padding: 0px 0;
@@ -787,24 +786,13 @@ body.darkmode .settings__mode {
   padding: 10px 25px;
 }
 
-.main-title {
-  position: relative;
-  padding-left: 20px;
-}
-.main-title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 100%;
-  border-radius: 10px;
-  background: var(--mainColor);
-}
-
 .article {
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 0 15px 15px 15px;
+}
+.article__body {
+  background: var(--white-secondly);
+  padding: 30px;
+  border-radius: 20px;
 }
 .article__title {
   margin-bottom: 10px;
@@ -813,72 +801,56 @@ body.darkmode .settings__mode {
   padding: 0 20px;
 }
 
-.second-title {
-  position: relative;
-  padding-left: 20px;
-  font-family: "gilroyBold_f";
+.skills {
+  padding: 0 15px 15px 15px;
 }
-.second-title::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 0px;
-  margin: 5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  background: var(--mainColor);
-}
-
-.skills-article {
-  padding: 0 20px;
-  width: 100%;
-}
-.skills-article__wrapper {
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
-}
-.skills-article__title {
-  font-size: 20px;
-  color: var(--black-primary);
-}
-.skills-article__grid {
-  padding: 10px 20px;
-  padding-bottom: 30px;
-  display: grid;
-  gap: 30px 50px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-.skills-article__tool {
-  font-family: "gilroyBold_f";
-  padding-bottom: 10px;
-  font-size: 20px;
-  color: var(--black-secondly);
-}
-.skills-article__progress-bar {
-  width: 100%;
-  height: 5px;
+.skills__body {
   background: var(--white-secondly);
-  position: relative;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 20px;
 }
-.skills-article__progress-bar::after {
+.skills__text {
+  padding: 20px;
+}
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.skills__item {
+  background: var(--white-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  border-radius: 15px;
+}
+.skills__tool {
+  font-size: 20px;
+  line-height: 1;
+  font-family: "gilroyBold_f";
+  white-space: nowrap;
+  color: var(--black-primary);
+  padding: 0 10px;
+}
+.skills__progress-bar {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: var(--white-secondly);
+}
+.skills__progress-bar::after {
   content: "";
   position: absolute;
-  border-radius: 10px;
-  top: -2.5px;
+  bottom: 0;
   left: 0;
-  width: var(--width-progress);
-  height: 10px;
-  background: var(--mainColor);
-}
-@media only screen and (max-width: 767.98px) {
-  .skills-article__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+  width: 100%;
+  height: var(--width-progress);
+  background: var(--black-primary);
 }
 
 .portofolio {
