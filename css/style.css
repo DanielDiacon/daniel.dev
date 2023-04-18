@@ -1066,7 +1066,7 @@ body.darkmode .settings__mode {
 }
 .popup .inner {
   padding: 15px;
-  background: var(--white-secondly);
+  background: var(--white-primary);
   min-width: 320px;
   border-radius: 10px;
   position: absolute;
@@ -1084,7 +1084,7 @@ body.darkmode .settings__mode {
   right: 10px;
 }
 .popup .close path {
-  fill: #fff;
+  fill: var(--black-primary);
 }
 
 .popup {
@@ -1116,7 +1116,7 @@ body.darkmode .settings__mode {
   height: 30px;
   width: 30px;
   padding: 2.5px;
-  color: var(--white-secondly);
+  color: var(--white-primary);
   border-radius: 5px;
 }
 .popup__social {
