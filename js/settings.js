@@ -69,38 +69,3 @@ likeButtons.forEach(function (button) {
    button.classList.toggle('active', postLikeStatus);
 });
 
-// change main color <=>
-const colorBox = document.getElementById("color-box");
-const clearButton = document.getElementById("clear");
-
-let selectedColor = localStorage.getItem("selectedColor");
-
-if (selectedColor) {
-   document.documentElement.style.setProperty("--mainColor", selectedColor);
-}
-
-function setColor(color) {
-   selectedColor = color;
-   document.documentElement.style.setProperty("--mainColor", color);
-   localStorage.setItem("selectedColor", color);
-}
-
-document.getElementById("red").addEventListener("click", function () {
-   setColor("hsl(0, 100%, 55%)");
-});
-
-document.getElementById("blue").addEventListener("click", function () {
-   setColor("hsl(220, 100%, 55%)");
-});
-
-document.getElementById("green").addEventListener("click", function () {
-   setColor("hsl(137, 100%, 55%)");
-});
-
-document.getElementById("yellow").addEventListener("click", function () {
-   setColor("hsl(61, 100%, 55%)");
-});
-
-document.getElementById("gray").addEventListener("click", function () {
-   setColor("hsl(319, 4%, 47%)");
-});
