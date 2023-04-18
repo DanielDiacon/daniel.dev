@@ -348,7 +348,6 @@ main {
   transition: 0.1s;
 }
 .menu__item:hover .menu__link {
-  background: none;
   color: var(--black-primary);
 }
 
@@ -405,6 +404,44 @@ main {
 }
 .sub-menu__btn.active .sub-menu__arrow {
   transform: rotate(0deg);
+}
+
+.menu__mode {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--white-secondly);
+  position: relative;
+}
+.menu__dark-icon {
+  pointer-events: none;
+  color: var(--black-primary);
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 7.5px;
+  left: 7.5px;
+}
+.menu .menu__dark-icon-one {
+  opacity: 1;
+  transition: 0.1s;
+}
+.menu .menu__dark-icon-two {
+  opacity: 0;
+  transition: 0.1s;
+}
+
+body.darkmode .menu__dark-icon-one {
+  opacity: 0;
+}
+
+body.darkmode .menu__dark-icon-two {
+  opacity: 1;
 }
 
 @media (max-width: 767.98px) {
@@ -816,7 +853,7 @@ body.darkmode .settings__mode {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  padding: 20px;
+  padding-top: 20px;
 }
 .skills__item {
   background: var(--white-primary);
